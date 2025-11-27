@@ -1,0 +1,103 @@
+/* Contrast Fix CSS - Ocean Blue Theme */
+
+/* Ensure all text has good contrast */
+body {
+    color: #1e293b;
+}
+
+/* Only override if not using typography classes */
+h1:not(.text-hero):not(.text-gradient), 
+h2:not(.text-subtitle), 
+h3, h4, h5, h6 {
+    color: #0f172a !important;
+}
+
+.card-title {
+    color: #1e293b !important;
+}
+
+.card-text {
+    color: #475569 !important;
+}
+
+.text-muted {
+    color: #64748b !important;
+}
+
+.lead {
+    color: #374151 !important;
+}
+
+/* Navbar text - dark for light background */
+.navbar .nav-link {
+    color: #374151 !important;
+}
+
+.navbar .navbar-brand {
+    color: #000000 !important;
+}
+
+/* Button text contrast */
+.btn-ocean,
+.btn-gradient {
+    color: #ffffff !important;
+}
+
+/* Form labels and text */
+.form-label {
+    color: #374151 !important;
+    font-weight: 600;
+}
+
+/* Alert text */
+.alert {
+    color: #1e293b !important;
+}
+
+/* Link colors */
+a:not(.btn):not(.nav-link):not(.navbar-brand) {
+    color: #0D5C75 !important;
+}
+
+a:not(.btn):not(.nav-link):not(.navbar-brand):hover {
+    color: #199FB1 !important;
+}
+
+/* Feature item text */
+.feature-item span {
+    color: #1e293b !important;
+    font-weight: 500;
+}
+
+/* Section titles and subtitles */
+.section-title {
+    color: #0f172a !important;
+}
+
+.section-subtitle {
+    color: #475569 !important;
+}
+
+/* Info card text */
+.info-card h4 {
+    color: #1e293b !important;
+}
+
+.info-card p {
+    color: #475569 !important;
+}
+
+/* Author info text */
+.author-info span {
+    color: #374151 !important;
+}
+
+/* Stats text */
+.stat-item {
+    color: #64748b !important;
+}
+
+/* Badge text */
+.badge-gradient {
+    color: #ffffff !important;
+}

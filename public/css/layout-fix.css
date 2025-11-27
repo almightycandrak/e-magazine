@@ -1,0 +1,207 @@
+/* Layout Fix CSS - Memperbaiki masalah tampilan */
+
+/* Reset dan Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    background: #ffffff !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Container Fixes */
+.container, .container-fluid {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Navbar Fixes */
+.modern-navbar {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+}
+
+/* Hero Section Fixes */
+.hero-section {
+    padding: 3rem 0;
+    background: #ffffff !important;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-content {
+    padding: 1rem 0;
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.hero-content h2 {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    margin-bottom: 1rem;
+}
+
+/* Card Fixes */
+.card, .modern-card, .info-card {
+    background: white !important;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.card-body {
+    background: white !important;
+    padding: 1.5rem;
+}
+
+/* Section Spacing */
+.about-section, .articles-section {
+    padding: 3rem 0;
+    background: #ffffff !important;
+}
+
+/* Footer Fixes */
+.modern-footer {
+    margin-top: 3rem;
+    width: 100%;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 2rem 0;
+    }
+    
+    .hero-content {
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    .feature-item {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .hero-section {
+        padding: 1.5rem 0;
+    }
+    
+    .about-section,
+    .articles-section {
+        padding: 2rem 0;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+}
+
+/* Utility Classes */
+.w-100 {
+    width: 100% !important;
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+.position-relative {
+    position: relative !important;
+}
+
+/* Animation Fixes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus States */
+*:focus {
+    outline: 2px solid #199FB1;
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .modern-navbar,
+    .modern-footer {
+        display: none !important;
+    }
+    
+    .hero-section,
+    .about-section,
+    .articles-section {
+        page-break-inside: avoid;
+    }
+}

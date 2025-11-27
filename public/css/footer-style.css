@@ -1,0 +1,325 @@
+/* Footer-Style Components CSS */
+/* Consistent styling to match the modern footer design */
+
+:root {
+    --footer-gradient: linear-gradient(135deg, #0D5C75 0%, #199FB1 100%);
+    --footer-gradient-reverse: linear-gradient(135deg, #199FB1 0%, #0D5C75 100%);
+    --footer-glass: rgba(255, 255, 255, 0.1);
+    --footer-shadow: 0 4px 15px rgba(13, 92, 117, 0.15);
+    --footer-shadow-hover: 0 8px 25px rgba(25, 159, 177, 0.25);
+    --footer-border-radius: 20px;
+    --footer-border-radius-sm: 15px;
+    --footer-border-radius-xs: 10px;
+}
+
+/* Social Links Style */
+.social-ocean {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--footer-border-radius-xs);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-ocean::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.social-ocean:hover::before {
+    left: 100%;
+}
+
+.social-ocean:hover {
+    transform: translateY(-3px);
+    color: white;
+}
+
+.social-facebook { background: linear-gradient(135deg, #4267B2, #365899); }
+.social-instagram { background: linear-gradient(135deg, #E4405F, #C13584); }
+.social-youtube { background: linear-gradient(135deg, #FF0000, #CC0000); }
+.social-twitter { background: linear-gradient(135deg, #1DA1F2, #0d8bd9); }
+
+/* Contact Items */
+.contact-ocean {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-ocean-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--footer-glass);
+    border-radius: var(--footer-border-radius-xs);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact-ocean-icon i {
+    color: #199FB1;
+    font-size: 1rem;
+}
+
+/* Modern Buttons */
+.btn-footer-style {
+    background: var(--footer-gradient);
+    border: none;
+    color: white;
+    border-radius: var(--footer-border-radius-sm);
+    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: var(--footer-shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-footer-style::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-footer-style:hover::before {
+    left: 100%;
+}
+
+.btn-footer-style:hover {
+    background: var(--footer-gradient-reverse);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: var(--footer-shadow-hover);
+    text-decoration: none;
+}
+
+/* Modern Cards */
+.card-footer-style {
+    background: white;
+    border-radius: var(--footer-border-radius);
+    box-shadow: var(--footer-shadow);
+    transition: all 0.3s ease;
+    border: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-footer-style::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(25, 159, 177, 0.03));
+    border-radius: var(--footer-border-radius);
+    z-index: -1;
+}
+
+.card-footer-style:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--footer-shadow-hover);
+}
+
+.card-footer-style .card-header {
+    background: var(--footer-gradient);
+    color: white;
+    border: none;
+    padding: 1.5rem;
+    font-weight: 600;
+    border-radius: var(--footer-border-radius) var(--footer-border-radius) 0 0;
+}
+
+/* Icon Containers */
+.icon-footer-style {
+    width: 50px;
+    height: 50px;
+    background: var(--footer-gradient);
+    border-radius: var(--footer-border-radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.icon-footer-style::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.icon-footer-style:hover::before {
+    left: 100%;
+}
+
+/* Section Styling */
+.section-footer-style {
+    background: white;
+    position: relative;
+    padding: 4rem 0;
+    overflow: hidden;
+}
+
+.section-footer-style::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    background: var(--footer-gradient);
+    border-radius: 50%;
+    opacity: 0.05;
+    z-index: 1;
+}
+
+/* Waves */
+.waves-footer-style {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.waves-footer-style svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px;
+}
+
+.waves-footer-style .shape-fill {
+    fill: #f8fafc;
+}
+
+/* Form Controls */
+.form-control-footer-style {
+    border: 2px solid #e2e8f0;
+    border-radius: var(--footer-border-radius-xs);
+    padding: 12px 16px;
+    transition: all 0.3s ease;
+}
+
+.form-control-footer-style:focus {
+    border-color: #199FB1;
+    box-shadow: 0 0 0 3px rgba(25, 159, 177, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Badges */
+.badge-footer-style {
+    background: var(--footer-gradient);
+    color: white;
+    border-radius: var(--footer-border-radius-sm);
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    font-weight: 600;
+}
+
+/* Alert */
+.alert-footer-style {
+    background: linear-gradient(135deg, rgba(165, 209, 225, 0.2) 0%, rgba(25, 159, 177, 0.1) 100%);
+    border: 1px solid #A5D1E1;
+    color: #0D5C75;
+    border-radius: var(--footer-border-radius-sm);
+    padding: 1rem 1.5rem;
+}
+
+/* Navigation Links */
+.nav-link-footer-style {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: var(--footer-border-radius-xs);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-link-footer-style:hover {
+    color: white;
+    background: var(--footer-glass);
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+/* Footer Links */
+.footer-link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.footer-link:hover {
+    color: #A5D1E1;
+    transform: translateX(5px);
+    text-decoration: none;
+}
+
+.footer-link i {
+    width: 16px;
+    font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-footer-style {
+        padding: 3rem 0 1.5rem;
+    }
+    
+    .contact-ocean {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .btn-footer-style {
+        width: 100%;
+        justify-content: center;
+    }
+}

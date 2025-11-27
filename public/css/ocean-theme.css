@@ -1,0 +1,278 @@
+/* Ocean Blue Theme CSS */
+/* Custom styles for ocean blue color palette - Matching Footer Design */
+
+:root {
+    --ocean-dark: #0D5C75;
+    --ocean-medium: #199FB1;
+    --ocean-light: #A5D1E1;
+    --ocean-gradient: linear-gradient(135deg, #0D5C75 0%, #199FB1 100%);
+    --ocean-gradient-reverse: linear-gradient(135deg, #199FB1 0%, #0D5C75 100%);
+    --ocean-glass: rgba(255, 255, 255, 0.1);
+    --ocean-shadow: 0 4px 15px rgba(13, 92, 117, 0.15);
+    --ocean-shadow-hover: 0 8px 25px rgba(25, 159, 177, 0.25);
+}
+
+/* Button variants - Footer Style */
+.btn-ocean {
+    background: var(--ocean-gradient);
+    border: none;
+    color: white;
+    border-radius: 15px;
+    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: var(--ocean-shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-ocean::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-ocean:hover::before {
+    left: 100%;
+}
+
+.btn-ocean:hover {
+    background: var(--ocean-gradient-reverse);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: var(--ocean-shadow-hover);
+}
+
+.btn-ocean-outline {
+    border: 2px solid var(--ocean-medium);
+    color: var(--ocean-medium);
+    background: transparent;
+}
+
+.btn-ocean-outline:hover {
+    background: var(--ocean-medium);
+    color: white;
+}
+
+/* Card variants - Footer Style */
+.card-ocean {
+    border: none;
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--ocean-shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-ocean::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(25, 159, 177, 0.03));
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.card-ocean:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--ocean-shadow-hover);
+}
+
+.card-ocean-header {
+    background: var(--ocean-gradient);
+    color: white;
+    border: none;
+    border-radius: 20px 20px 0 0;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-ocean-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.card-ocean-header:hover::before {
+    left: 100%;
+}
+
+/* Alert variants */
+.alert-ocean {
+    background: linear-gradient(135deg, rgba(165, 209, 225, 0.2) 0%, rgba(25, 159, 177, 0.1) 100%);
+    border: 1px solid var(--ocean-light);
+    color: var(--ocean-dark);
+}
+
+/* Badge variants */
+.badge-ocean {
+    background: var(--ocean-medium);
+    color: white;
+}
+
+.badge-ocean-light {
+    background: var(--ocean-light);
+    color: var(--ocean-dark);
+}
+
+/* Text colors */
+.text-ocean-dark { color: var(--ocean-dark) !important; }
+.text-ocean-medium { color: var(--ocean-medium) !important; }
+.text-ocean-light { color: #64748b !important; }
+
+/* High contrast text colors */
+.text-dark { color: #1e293b !important; }
+.text-darker { color: #0f172a !important; }
+
+/* Background colors */
+.bg-ocean-dark { background-color: var(--ocean-dark) !important; }
+.bg-ocean-medium { background-color: var(--ocean-medium) !important; }
+.bg-ocean-light { background-color: var(--ocean-light) !important; }
+
+/* Gradient backgrounds */
+.bg-ocean-gradient {
+    background: linear-gradient(135deg, var(--ocean-light) 0%, var(--ocean-medium) 100%);
+}
+
+.bg-ocean-gradient-dark {
+    background: linear-gradient(135deg, var(--ocean-medium) 0%, var(--ocean-dark) 100%);
+}
+
+/* Form controls */
+.form-control-ocean:focus {
+    border-color: var(--ocean-medium);
+    box-shadow: 0 0 0 0.2rem rgba(25, 159, 177, 0.25);
+}
+
+/* Progress bars */
+.progress-ocean .progress-bar {
+    background: linear-gradient(135deg, var(--ocean-medium) 0%, var(--ocean-dark) 100%);
+}
+
+/* Links */
+.link-ocean {
+    color: var(--ocean-medium);
+    text-decoration: none;
+}
+
+.link-ocean:hover {
+    color: var(--ocean-dark);
+    text-decoration: underline;
+}
+
+/* Borders */
+.border-ocean { border-color: var(--ocean-medium) !important; }
+.border-ocean-light { border-color: var(--ocean-light) !important; }
+.border-ocean-dark { border-color: var(--ocean-dark) !important; }
+
+/* Footer-style components */
+.ocean-section {
+    background: white;
+    position: relative;
+    padding: 4rem 0;
+    overflow: hidden;
+}
+
+.ocean-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    background: var(--ocean-gradient);
+    border-radius: 50%;
+    opacity: 0.05;
+    z-index: 1;
+}
+
+.ocean-waves {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.ocean-waves svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px;
+}
+
+.ocean-waves .shape-fill {
+    fill: #f8fafc;
+}
+
+/* Modern Cards */
+.modern-card-ocean {
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--ocean-shadow);
+    transition: all 0.3s ease;
+    border: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.modern-card-ocean:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--ocean-shadow-hover);
+}
+
+.modern-card-ocean .card-header {
+    background: var(--ocean-gradient);
+    color: white;
+    border: none;
+    padding: 1.5rem;
+    font-weight: 600;
+}
+
+/* Icon containers */
+.ocean-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--ocean-gradient);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.ocean-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.ocean-icon:hover::before {
+    left: 100%;
+}

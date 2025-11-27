@@ -1,0 +1,329 @@
+/* Modern User Management Styles */
+
+/* User Header - Same as Category */
+.user-header {
+    background: linear-gradient(135deg, #0a1628 0%, #0D5C75 30%, #199FB1 70%, #2dd4bf 100%);
+    padding: 2.5rem 0 4rem;
+    margin-top: 4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(13, 92, 117, 0.4);
+}
+
+.user-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: conic-gradient(from 0deg, rgba(255, 255, 255, 0.1), rgba(45, 212, 191, 0.2), rgba(255, 255, 255, 0.05));
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
+}
+
+.user-header::after {
+    content: '';
+    position: absolute;
+    bottom: -40%;
+    left: -15%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(ellipse, rgba(25, 159, 177, 0.3) 0%, rgba(165, 209, 225, 0.1) 40%, transparent 70%);
+    border-radius: 50%;
+    animation: pulse 8s ease-in-out infinite;
+}
+
+/* User Cards */
+.user-card-modern {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.user-card-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #199FB1, #0D5C75);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.user-card-modern:hover::before {
+    transform: scaleX(1);
+}
+
+.user-card-modern:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(25, 159, 177, 0.15);
+}
+
+/* User Avatar */
+.user-avatar {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #199FB1, #0D5C75);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(25, 159, 177, 0.3);
+}
+
+.user-avatar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s;
+}
+
+.user-card-modern:hover .user-avatar::before {
+    left: 100%;
+}
+
+.status-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #f59e0b;
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+.status-badge-card {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: #f59e0b;
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+    z-index: 10;
+}
+
+/* User Info */
+.user-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.user-email {
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+.role-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.role-admin {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+}
+
+.role-guru {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+}
+
+.role-siswa {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+}
+
+/* User Actions */
+.user-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.btn-disabled {
+    background: #f1f5f9;
+    color: #94a3b8;
+    cursor: not-allowed;
+}
+
+/* Form Containers */
+.create-user-container,
+.edit-user-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    padding: 2rem 0;
+}
+
+/* Shared styles from category-modern.css */
+.user-header .particles,
+.user-header .geometric-pattern,
+.user-header .gradient-overlay,
+.user-header .bottom-border,
+.user-header .header-icon,
+.user-header .btn {
+    /* Inherit from kategori-modern.css */
+}
+
+/* Animations */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.3; }
+    50% { transform: scale(1.1) rotate(180deg); opacity: 0.6; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.user-card-modern {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.user-card-modern:nth-child(2) { animation-delay: 0.1s; }
+.user-card-modern:nth-child(3) { animation-delay: 0.2s; }
+.user-card-modern:nth-child(4) { animation-delay: 0.3s; }
+
+/* Enhanced Header Buttons */
+.user-header .btn,
+.kategori-header .btn,
+.laporan-header .btn {
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    color: white;
+    backdrop-filter: blur(15px);
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 20;
+}
+
+.user-header .btn::before,
+.kategori-header .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.user-header .btn:hover::before,
+.kategori-header .btn:hover::before {
+    left: 100%;
+}
+
+.user-header .btn:hover,
+.kategori-header .btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.user-header .btn-sm,
+.kategori-header .btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 20px;
+}
+
+.user-header .btn-lg,
+.kategori-header .btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    font-weight: 700;
+}
+
+/* Fix button z-index */
+.user-header .btn,
+.kategori-header .btn {
+    position: relative;
+    z-index: 20;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .user-header {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding: 2rem 0 3rem;
+    }
+    
+    .user-avatar {
+        width: 70px;
+        height: 70px;
+        font-size: 1.75rem;
+    }
+    
+    .user-meta {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+    
+    .user-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .user-name {
+        font-size: 1.1rem;
+    }
+    
+    .user-email {
+        font-size: 0.85rem;
+    }
+    
+    .role-badge {
+        justify-content: center;
+    }
+}

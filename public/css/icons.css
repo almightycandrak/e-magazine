@@ -1,0 +1,71 @@
+/* Icon Optimization CSS */
+/* Ensures consistent icon sizing and alignment across the application */
+
+/* Base icon styles */
+.fas, .far, .fab {
+    line-height: 1;
+    vertical-align: baseline;
+}
+
+/* Navbar icons */
+.navbar .fas {
+    font-size: 14px;
+    width: 16px;
+    text-align: center;
+}
+
+/* Button icons */
+.btn .fas {
+    font-size: 13px;
+    margin-right: 4px;
+}
+
+/* Card icons */
+.card .fas {
+    font-size: 14px;
+}
+
+/* Form icons */
+.form-group .fas {
+    font-size: 14px;
+    width: 16px;
+    text-align: center;
+}
+
+/* Logo optimization */
+.navbar-logo {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
+
+/* Icon hover effects */
+.nav-link:hover .fas,
+.btn:hover .fas {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+/* Responsive icon adjustments */
+@media (max-width: 768px) {
+    .navbar .fas {
+        font-size: 13px;
+        width: 14px;
+    }
+    
+    .btn .fas {
+        font-size: 12px;
+    }
+}
+
+/* Icon color consistency - Ocean Blue Theme */
+.text-primary .fas { color: #199FB1 !important; }
+.text-success .fas { color: #0D5C75 !important; }
+.text-warning .fas { color: #f59e0b !important; }
+.text-danger .fas { color: #ef4444 !important; }
+.text-muted .fas { color: #A5D1E1 !important; }
+
+/* Ocean blue icon variants */
+.text-ocean-dark .fas { color: #0D5C75 !important; }
+.text-ocean-medium .fas { color: #199FB1 !important; }
+.text-ocean-light .fas { color: #A5D1E1 !important; }

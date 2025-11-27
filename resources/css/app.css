@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    
+    /* Ocean Blue Color Palette */
+    --ocean-dark: #0D5C75;
+    --ocean-medium: #199FB1;
+    --ocean-light: #A5D1E1;
+    
+    /* Primary colors using ocean theme */
+    --primary: var(--ocean-medium);
+    --primary-dark: var(--ocean-dark);
+    --primary-light: var(--ocean-light);
+}
